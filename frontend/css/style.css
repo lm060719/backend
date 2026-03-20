@@ -1,0 +1,106 @@
+/* --- 全局和背景 --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #6366F1; /* 温和的紫色/蓝色 */
+  --primary-hover-color: #4F46E5;
+  --background-color: #F8F9FA;
+  --container-background: #FFFFFF;
+  --text-color-primary: #111827;
+  --text-color-secondary: #6B7280;
+  --border-color: #D1D5DB;
+  --focus-ring-color: rgba(99, 102, 241, 0.2);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* --- 登录框容器 --- */
+.login-container {
+  background-color: var(--container-background);
+  padding: 48px; /* 增加了内边距 */
+  border-radius: 12px; /* 更大的圆角 */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05); /* 更柔和、更弥散的阴影 */
+  width: 100%;
+  max-width: 420px; /* 稍微加宽 */
+  box-sizing: border-box;
+  text-align: center; /* 让内部元素更容易居中 */
+}
+
+/* --- 标题 --- */
+h2 {
+  color: var(--text-color-primary);
+  margin-top: 0;
+  margin-bottom: 40px; /* 增加了与下方元素的距离 */
+  font-weight: 600;
+  font-size: 28px;
+}
+
+/* --- 输入框组 --- */
+.input-group {
+  margin-bottom: 24px; /* 增加了组之间的距离 */
+  text-align: left; /* 标签左对齐 */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-color-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 14px 16px; /* 增加了输入框的内边距 */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: #F9FAFB; /* 给输入框一个极淡的背景色 */
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  background-color: #fff;
+  box-shadow: 0 0 0 4px var(--focus-ring-color); /* 更现代的辉光效果 */
+}
+
+/* --- 登录按钮 --- */
+button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 16px; /* 在按钮上方添加额外间距 */
+  background: linear-gradient(to right, #6366F1, #818CF8); /* 使用渐变色 */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.5px; /* 增加字间距 */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+}
+
+/* 鼠标悬停在按钮上时的动效 */
+button:hover {
+  transform: translateY(-3px); /* 向上浮动 */
+  box-shadow: 0 7px 20px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25);
+}
